@@ -10,6 +10,7 @@ func (e *Exam) Edit() int {
 	return e.userService.LoadUserId(1)
 }
 
-func NewExam(user service.UserService) *Exam {
-	return &Exam{userService: user}
+func NewExam() *Exam {
+	service, _ := service.NewUserService()
+	return &Exam{userService: service}
 }

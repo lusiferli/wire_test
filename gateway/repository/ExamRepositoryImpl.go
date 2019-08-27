@@ -10,9 +10,9 @@ type ExamRepository struct {
 }
 
 func (u *ExamRepository) Load(id int) *domain.Exam {
-	return domain.NewExam(u.userService)
+	return domain.NewExam()
 }
 
-func NewExamRepository(userService service2.UserService) *ExamRepository {
-	return &ExamRepository{userService: userService}
+func NewExamRepository() *ExamRepository {
+	return &ExamRepository{}
 }
