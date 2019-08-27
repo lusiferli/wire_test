@@ -7,8 +7,7 @@ import (
 )
 
 func main() {
-	configuration.RepositoryInit()
-	configuration.ServiceInit()
+	configuration.Init()
 
 	fmt.Println(handler.EditExam())
 	fmt.Println("111")
